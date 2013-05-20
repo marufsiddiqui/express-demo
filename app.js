@@ -7,9 +7,18 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
+  , passport = require('passport')
+  , LocalStrategy = require('passport-local')
   , path = require('path');
 
 var app = express();
+
+// Setup passport local strategy
+passport.use(new LocalStrategy(
+  function (username, password, done) {
+    
+  }
+));
 
 // all environments
 app.set('port', process.env.PORT || 3000);
