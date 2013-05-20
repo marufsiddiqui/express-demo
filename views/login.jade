@@ -1,9 +1,10 @@
 extends layout
 
 block content
-  form(action='/login', method='post')
-    label Username
-      input(name='username')
-    label Password
-      input(name='password', type='password')
-    input(type='submit', value='Submit')
+  form(action='/login', method='post', class='form-signin')
+    h2.form-signin-heading Please sign in
+    input(name='username', type='text', class='input-block-level', placeholder='Email address', required='required')
+    input(name='password', type='password', class='input-block-level', placeholder='Password', required='required')
+    label.checkbox Remember Me
+      input(type='checkbox', value='remember-me')
+    button(type='submit', class='btn btn-large btn-primary') Sign In
