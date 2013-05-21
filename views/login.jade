@@ -3,8 +3,8 @@ extends layout
 block content
   form(action='/login', method='post', class='form-signin')
     h2.form-signin-heading Please sign in
-    input(name='username', type='text', class='input-block-level', placeholder='Email address', required='required')
-    input(name='password', type='password', class='input-block-level', placeholder='Password', required='required')
+    input.input-block-level(name='username', type='text', placeholder='Email address', required='required')
+    input.input-block-level(name='password', type='password', placeholder='Password', required='required')
     label.checkbox Remember Me
-      input(type='checkbox', value='remember-me')
+      input(type='checkbox', value='remember-me', name='remember')
     button(type='submit', class='btn btn-large btn-primary') Sign In
